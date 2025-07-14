@@ -1,0 +1,27 @@
+<div class="hero flex items-center justify-around">
+  <h1>
+    Hi! my name is, <br>
+    <span class="test-bcg">Joanna</span>. <br>
+    I'm a Fullstack Web Developer. <br>
+    I create Exciting Stuff on the Internet.
+  </h1>
+
+  <div class="hero-orbit flex justify-center items-center aspect-square lg:w-[500px] relative w-[360px]">
+    <div class="hero-orbit__avatar flex_center aspect-square rounded-full w-[50%] z-10">
+      <img class="object-cover rounded-full" alt="avatar" decoding="async" height="180" loading="eager" src="https://imgcdn.stablediffusionweb.com/2024/10/24/e8cf9ac4-1b39-4aab-b2aa-8b7b538d43d0.jpg" width="250">
+<!--          <img style="background-color: darkmagenta" class="object-cover rounded-[100%]" alt="avatar" decoding="async" height="180" loading="eager" src="assets/avatar.webp" width="250">-->
+    </div>
+    @for (orbit of orbitsArray; track orbit.width) {
+      <div
+        class="hero-orbit__trail"
+        [ngStyle]="{
+      width: orbit.width + '%',
+      zIndex: orbit.index,
+      animationDuration: orbit.animationDuration + 's'
+      }">
+        <span class="hero-orbit__dot"></span>
+      </div>
+    }
+  </div>
+</div>
+

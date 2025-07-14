@@ -1,0 +1,24 @@
+:root {
+  //layout
+  --max-width: 1600px;
+  --nav-offset: 66px;
+
+  //colors
+  //--primary: #9400D3;
+  //--secondary: #FF00BF;
+
+  --primary: #0192B3;
+  --secondary: #293998;
+
+  --cyan: #00FFFF;
+  --gold: #FFD700;
+  --sunset: #FF4500;
+
+  //backgrounds
+  --main-bcg: #000;
+
+  //gradients
+  --orbit-gradient: conic-gradient( transparent, transparent, var(--primary), var(--secondary), #fff );
+  --orbit-gradient-alt: conic-gradient( #fff, var(--primary), var(--secondary), transparent, transparent );
+  --gradient: linear-gradient( to right, var(--secondary), var(--primary), var(--primary), var(--secondary) );
+}

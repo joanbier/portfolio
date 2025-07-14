@@ -1,1 +1,9 @@
 @use "tailwindcss";
+@use "styles/variables";
+
+body {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--main-bcg);
+  color: #ddd;
+}

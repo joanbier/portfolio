@@ -1,0 +1,25 @@
+<div class="swiper myswiper">
+  <swiper-container
+    class="swiper-container"
+    effect="cube"
+    autoplay="true"
+    speed="1500"
+    loop="true"
+    grab-cursor="true"
+    cube-effect-shadow="true"
+    cube-effect-slide-shadows="true"
+    cube-effect-shadow-offset="20"
+    cube-effect-shadow-scale="0.94"
+  >
+    @for (slide of slides(); track slide.id) {
+      <swiper-slide class="swiper-slide relative">
+        <div class="w-full h-[400px] flex items-center justify-center text-white text-xl bg-blue-600">
+          <p>{{ slide.id }}</p>
+        </div>
+        <p class="text-center absolute bottom-[5px] left-[50%] bg-red-500">{{slide.title}}</p>
+      </swiper-slide>
+
+    }
+
+  </swiper-container>
+</div>

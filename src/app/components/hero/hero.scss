@@ -1,0 +1,86 @@
+.hero {
+  min-height: 100vh;
+}
+
+.test-bcg {
+  background: var(--gradient);
+}
+
+
+.hero-orbit {
+  opacity: 0;
+  animation: bounce 1s linear 1;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  &:hover &__dot {
+    scale: 1.5;
+    background-color: #000 !important;
+    outline: .5px solid white;
+  }
+
+  &__trail {
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: rotate 6s linear infinite;
+    background: var(--orbit-gradient);
+    &:before{
+      content: "";
+      width: 99%;
+      aspect-ratio: 1;
+      inset: 0;
+      margin: auto;
+      border-radius: 50%;
+      position: absolute;
+      background-color: var(--main-bcg);
+    }
+    &:nth-child(even) {
+      animation-direction: reverse;
+      background: var(--orbit-gradient-alt);
+      span {
+        transform: rotate(140deg)!important;
+      }
+    }
+  }
+
+  &__dot {
+    width: .5em;
+    aspect-ratio: 1;
+    background-color: pink;
+    border-radius: 0 50% 50%;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -.2em;
+    left: 49%;
+    transition: .25s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 0 10px pink;
+  }
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+//style="transform: translate(0px, 0px); translate: none; rotate: none; scale: none; opacity: 1;"

@@ -1,0 +1,9 @@
+.myswiper {
+  width: 300px;
+  margin: 50px auto;
+  .swiper-slide {
+    border-radius: 30px;
+    overflow: hidden;
+    border: 10px solid transparent;
+  }
+}

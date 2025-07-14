@@ -1,0 +1,10 @@
+<div id="navbar" class="navbar flex items-center justify-between">
+  <span (click)="scrollToSection('hero')">Logo</span>
+  <nav class="flex gap-10">
+    @for (link of navLinks; let i = $index; track i) {
+      <span class="navbar__link" [ngClass]="{'navbar__link--active': activeSection() === link}" (click)="scrollToSection(link)">{{link}}</span>
+    }
+  </nav>
+  <button class="border">Resume</button>
+</div>
+

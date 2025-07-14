@@ -1,0 +1,16 @@
+<div
+  class="section-title flex items-center relative"
+  [ngClass]="{
+  'justify-center text-3xl' : mode() === 'center',
+  'justify-end' : mode() === 'end',
+  'no-after': mode() === 'end',
+   'text-xl': mode() !== 'center',
+  }">
+  <span>< </span>
+  <h2><ng-content></ng-content></h2>
+  <span>
+    @if (mode() !== 'start'){
+      <span>/</span>
+    }
+    ></span>
+</div>
