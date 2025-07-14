@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-import {NgStyle} from '@angular/common';
+import {Component} from '@angular/core';
+import {AsyncPipe, NgStyle} from '@angular/common';
+import {TranslateSafeHtmlPipe} from '../../shared/translate-safe-html-pipe';
 
 @Component({
   selector: 'app-hero',
   imports: [
-    NgStyle
+    NgStyle,
+    TranslateSafeHtmlPipe,
+    AsyncPipe
   ],
   templateUrl: './hero.html',
   styleUrl: './hero.scss'

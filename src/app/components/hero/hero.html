@@ -1,10 +1,12 @@
 <div class="hero flex items-center justify-around">
-  <h1>
-    Hi! my name is, <br>
-    <span class="test-bcg">Joanna</span>. <br>
-    I'm a Fullstack Web Developer. <br>
-    I create Exciting Stuff on the Internet.
-  </h1>
+<!--  <h1>{{ 'HERO.INTRO' | translate}}</h1>-->
+  <h1 [innerHTML]="'HERO.INTRO' | translateSafeHtml | async"></h1>
+<!--  <h1>-->
+<!--    Hi! my name is, <br>-->
+<!--    <span class="test-bcg">Joanna</span>. <br>-->
+<!--    I'm a Fullstack Web Developer. <br>-->
+<!--    I create Exciting Stuff on the Internet.-->
+<!--  </h1>-->
 
   <div class="hero-orbit flex justify-center items-center aspect-square lg:w-[500px] relative w-[360px]">
     <div class="hero-orbit__avatar flex_center aspect-square rounded-full w-[50%] z-10">

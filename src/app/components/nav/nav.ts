@@ -1,5 +1,6 @@
-import {AfterViewInit, Component, HostListener, signal} from '@angular/core';
+import {AfterViewInit, Component, HostListener, inject, signal} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav',
@@ -10,10 +11,16 @@ import {NgClass} from '@angular/common';
   styleUrl: './nav.scss'
 })
 export class Nav implements AfterViewInit{
+  translate: TranslateService = inject(TranslateService);
   activeSection = signal<string>('');
   navHeight = 66;
 
   navLinks = ['about', 'skills', 'project', 'contact'];
+
+  constructor() {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   ngAfterViewInit(): void {
     const navbar = document.getElementById('navbar');
@@ -33,6 +40,10 @@ export class Nav implements AfterViewInit{
     });
 
     this.activeSection.set(currentSection);
+  }
+
+  switchLang(lang: string) {
+    this.translate.use(lang);
   }
 
   scrollToSection(sectionId: string) {

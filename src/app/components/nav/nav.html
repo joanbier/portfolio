@@ -4,7 +4,10 @@
     @for (link of navLinks; let i = $index; track i) {
       <span class="navbar__link" [ngClass]="{'navbar__link--active': activeSection() === link}" (click)="scrollToSection(link)">{{link}}</span>
     }
+    <div>
+      <button (click)="switchLang('en')">EN</button>
+      <button (click)="switchLang('pl')">PL</button>
+    </div>
   </nav>
   <button class="border">Resume</button>
 </div>
-
