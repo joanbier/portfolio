@@ -1,0 +1,23 @@
+.text-primary {
+  color: var(--primary);
+}
+
+.gradientText {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  background-size: 200%;
+  animation: gradientPan 5s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes gradientPan {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}

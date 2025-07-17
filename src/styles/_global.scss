@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--main-bcg);
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+//scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+  &-track {
+    background: var(--main-bcg);
+  }
+  &-thumb {
+    border-radius: 5px;
+    background: var(--secondary);
+    &:hover {
+      background: var(--primary);
+    }
+  }
+}

@@ -1,11 +1,15 @@
 import {AfterViewInit, Component, HostListener, inject, signal} from '@angular/core';
-import {NgClass} from '@angular/common';
-import {TranslateService} from '@ngx-translate/core';
+import {NgClass, UpperCasePipe} from '@angular/common';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
+import {Btn} from '../../shared/btn/btn';
 
 @Component({
   selector: 'app-nav',
   imports: [
-    NgClass
+    NgClass,
+    TranslatePipe,
+    UpperCasePipe,
+    Btn
   ],
   templateUrl: './nav.html',
   styleUrl: './nav.scss'
@@ -15,7 +19,7 @@ export class Nav implements AfterViewInit{
   activeSection = signal<string>('');
   navHeight = 66;
 
-  navLinks = ['about', 'skills', 'project', 'contact'];
+  navLinks = ['about', 'skills', 'projects', 'contact'];
 
   constructor() {
     this.translate.setDefaultLang('en');
@@ -42,8 +46,10 @@ export class Nav implements AfterViewInit{
     this.activeSection.set(currentSection);
   }
 
-  switchLang(lang: string) {
-    this.translate.use(lang);
+  switchLang(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    const selectedLang = selectElement.value;
+    this.translate.use(selectedLang);
   }
 
   scrollToSection(sectionId: string) {

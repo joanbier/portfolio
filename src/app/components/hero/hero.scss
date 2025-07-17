@@ -1,12 +1,6 @@
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 62px);
 }
-
-.test-bcg {
-  background: var(--gradient);
-  font-size: 20px;
-}
-
 
 .hero-orbit {
   opacity: 0;
@@ -82,6 +76,3 @@
     scale: 1;
   }
 }
-
-
-//style="transform: translate(0px, 0px); translate: none; rotate: none; scale: none; opacity: 1;"

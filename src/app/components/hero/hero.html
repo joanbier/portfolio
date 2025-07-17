@@ -1,12 +1,16 @@
 <div class="hero flex items-center justify-around">
-<!--  <h1>{{ 'HERO.INTRO' | translate}}</h1>-->
-  <h1 [innerHTML]="'HERO.INTRO' | translateSafeHtml | async"></h1>
-<!--  <h1>-->
-<!--    Hi! my name is, <br>-->
-<!--    <span class="test-bcg">Joanna</span>. <br>-->
-<!--    I'm a Fullstack Web Developer. <br>-->
-<!--    I create Exciting Stuff on the Internet.-->
-<!--  </h1>-->
+  <div class="text-2xl">
+    <h1>
+      <span>{{'HERO.INTRO-1' | translate}}</span>
+      <app-glitch-text [glitchText]="'Joanna.'"/>
+      <span [innerHTML]="'HERO.INTRO-2' | translateSafeHtml | async"></span>
+    </h1>
+    <div class="flex gap-10 mt-6">
+      @for (item of socialArray; track $index) {
+        <img class="w-[35px]" [src]="'./assets/icons/' + item + '.svg'" [alt]="item + 'icon'">
+      }
+    </div>
+  </div>
 
   <div class="hero-orbit flex justify-center items-center aspect-square lg:w-[500px] relative w-[360px]">
     <div class="hero-orbit__avatar flex_center aspect-square rounded-full w-[50%] z-10">

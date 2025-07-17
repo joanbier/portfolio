@@ -1,13 +1,16 @@
 <div id="navbar" class="navbar flex items-center justify-between">
-  <span (click)="scrollToSection('hero')">Logo</span>
+  <div>
+    <span class="navbar__logo text-primary" (click)="scrollToSection('hero')">J.Biernat</span>
+    <select (change)="switchLang($event)" name="lang" id="dropdown" aria-label="switch language">
+      <option value="en">EN</option>
+      <option value="pl">PL</option>
+    </select>
+  </div>
+
   <nav class="flex gap-10">
     @for (link of navLinks; let i = $index; track i) {
-      <span class="navbar__link" [ngClass]="{'navbar__link--active': activeSection() === link}" (click)="scrollToSection(link)">{{link}}</span>
+      <span class="navbar__link" [ngClass]="{'navbar__link--active': activeSection() === link}" (click)="scrollToSection(link)">{{('NAV.' + link) | uppercase | translate}}</span>
     }
-    <div>
-      <button (click)="switchLang('en')">EN</button>
-      <button (click)="switchLang('pl')">PL</button>
-    </div>
   </nav>
-  <button class="border">Resume</button>
+  <app-btn type="fancy" [icon]="'download'">{{'NAV.RESUME' | translate}}</app-btn>
 </div>

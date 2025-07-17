@@ -11,8 +11,17 @@
   padding: 10px 20px;
   background-color: rgba(var(--main-bcg) 0.7);
 
+  &__logo {
+    cursor: pointer;
+    font-family: "Dr Sugiyama", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-right: 50px;
+  }
+
   &__link {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 500;
     font-size: 18px;
     padding: 10px 10px 5px 10px;
@@ -40,4 +49,20 @@
       }
     }
   }
+}
+
+#dropdown {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgba(var(--main-bcg) 0.7);
+  padding: 10px;
+  border: 1px solid transparent;
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--secondary);
+    background-color: var(--main-bcg);
+  }
+
 }

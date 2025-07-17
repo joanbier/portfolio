@@ -1,6 +1,14 @@
 {
+  "NAV": {
+    "ABOUT": "O mnie",
+    "SKILLS": "Umiejętności",
+    "PROJECTS": "Projekty",
+    "CONTACT": "Kontakt",
+    "RESUME": "Pobierz CV"
+  },
   "HERO": {
-    "INTRO": "Cześć! Mam na imię<br><span class='test-bcg'>Asia</span>.<br>Jestem Fullstack Web Developerem.<br>Tworzę ciekawe rzeczy w internetach."
+    "INTRO-1": "Cześć! Mam na imię",
+    "INTRO-2": "Jestem Fullstack Developerem, <br> który tworzy ciekawe rzeczy na stronach internetowych."
   },
   "ABOUT": {
     "TITLE": "MÓJ TEST"

@@ -1,6 +1,14 @@
 {
+  "NAV": {
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "RESUME": "Resume"
+  },
   "HERO": {
-    "INTRO": "Hi! my name is,<br><span class='test-bcg'>Joanna</span>.<br>I'm a Fullstack Web Developer.<br>I create Exciting Stuff on the Internet."
+    "INTRO-1": "Hi! my name is",
+    "INTRO-2": "I'm a Fullstack Developer <br> creating <span class='gradientText'>Exciting Stuff</span> on the Internet."
   },
   "ABOUT": {
     "TITLE": "my test"

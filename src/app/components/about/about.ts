@@ -1,4 +1,4 @@
-import {Component,} from '@angular/core';
+import {Component} from '@angular/core';
 import {MySlider} from '../../shared/my-slider/my-slider';
 import {SectionTitle} from '../../shared/section-title/section-title';
 
@@ -7,7 +7,7 @@ import {SectionTitle} from '../../shared/section-title/section-title';
   selector: 'app-about',
   imports: [
     MySlider,
-    SectionTitle
+    SectionTitle,
   ],
   templateUrl: './about.html',
   styleUrl: './about.scss',

@@ -1,0 +1,51 @@
+.btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  border: 2px solid var(--white);
+  border-radius: var(--border-radius);
+  background-color: var(--main-bcg);
+  transition: .2s;
+  overflow: hidden;
+  &:hover {
+    filter: invert(100%);
+  }
+  &--fancy {
+    position: relative;
+    z-index: 1;
+    border: none;
+    transition: .3s;
+    &:hover{
+      filter: none;
+      box-shadow: 0 0 15px var(--primary);
+      &::after {
+        background: linear-gradient(90deg, var(--main-bcg), var(--main-bcg));
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      top: -80px;
+      left: -30px;
+      border-radius: inherit;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+      animation: spin 6s linear infinite;
+    }
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
