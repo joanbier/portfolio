@@ -18,7 +18,7 @@ export class About implements OnInit {
     { id: 1, title: 'Code & Coffee', img: 'coding.webp' },
     { id: 2, title: 'Travel & Nature', img: 'forest.webp' },
     { id: 3, title: 'Play & Pixels', img: 'play.webp' },
-    { id: 4, title: 'Cook & Bake', img: 'cooking.web' },
+    { id: 4, title: 'Cook & Bake', img: 'cooking.webp' },
   ];
 
   skills = [
