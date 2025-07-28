@@ -2,10 +2,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  background-color: var(--main-bcg);
+}
+
 body {
   max-width: var(--max-width);
   margin: 0 auto;
-  background-color: var(--main-bcg);
   color: var(--white);
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
