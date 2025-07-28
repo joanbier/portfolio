@@ -13,6 +13,48 @@
   will-change: background-position;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
+  &--between {
+    justify-content: space-between;
+    & > *:last-child {
+      margin-bottom: 10vh;
+    }
+  }
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    padding: 5vh 10px;
+  }
+  &__title {
+    font-size: 25px;
+    margin-bottom: 5vh;
+    line-height: 1;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    &__content {
+      padding: 8vh 15px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
+}
+
 @keyframes gradientPan {
   from {
     background-position: 0 center;

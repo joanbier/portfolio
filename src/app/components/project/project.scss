@@ -1,0 +1,63 @@
+.project {
+  &__mobile, &__desktop {
+    background-color: var(--main-bcg);
+    background-repeat: no-repeat;
+  }
+  &__mobile {
+    position: relative;
+    width: 90%;
+    max-width: 200px;
+    background-image: url("/assets/backgrounds/iphone-placeholder.webp");
+    background-size: 95% 90%;
+    background-position: 20% 75%;
+    video {
+      position: absolute;
+      top: 2%;
+      left: 50%;
+      width: 88%;
+      border-radius: 30px;
+      transform: translateX(-50%);
+    }
+  }
+  &__desktop {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    background-image: url("/assets/backgrounds/desktop-placeholder.webp");
+    background-size: 80% 85%;
+    background-position: 51% 32%;
+    video {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      width: 80%;
+      transform: translateX(-50%);
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: calc(var(--spacing) * 4);
+    &:first-child {
+      margin-bottom: calc(var(--spacing) * 5);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    &__mobile {
+      max-width: 250px;
+    }
+    &__description {
+      padding: 5vh 3%;
+      width: 45%;
+
+      &:first-child {
+        border-right: 1px solid var(--primary);
+        margin-bottom: 0;
+      }
+    }
+  }
+}

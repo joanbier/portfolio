@@ -8,6 +8,20 @@ body {
   background-color: var(--main-bcg);
   color: var(--white);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  margin-top: var(--nav-offset);
+}
+
+section {
+  padding: 0 10px;
+}
+
+section > * {
+  display: block;
+  min-height: calc(100vh - var(--nav-offset))
 }
 
 //scrollbar
@@ -21,6 +35,42 @@ body {
     background: var(--secondary);
     &:hover {
       background: var(--primary);
+    }
+  }
+}
+
+//slider
+input[type=range] {
+  -webkit-appearance: none;
+  height: 12px;
+  border-radius: 5px;
+  background: #262626;
+  outline: none;
+  width: 100%;
+  -webkit-transition: .2s;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    &:active {
+      background: var(--secondary);
+    }
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: var(--primary);
+    background: var(--primary);
+    cursor: pointer;
+    &:active {
+      background: var(--secondary);
     }
   }
 }

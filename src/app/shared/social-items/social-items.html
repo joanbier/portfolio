@@ -1,0 +1,7 @@
+<div class="flex gap-10 w-fit">
+  @for (item of socialArray; track $index) {
+    <a class="transition duration-100 hover:scale-120" [href]="item.link">
+      <img class="w-[35px]" [src]="'./assets/icons/' + item.name + '.svg'" [alt]="item.name + 'icon'">
+    </a>
+  }
+</div>

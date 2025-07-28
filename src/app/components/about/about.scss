@@ -1,8 +1,37 @@
 .about {
   &__description {
-    width: 40%;
-    padding-left: 5%;
-    margin-left: 5%;
-    border-left: 1px solid var(--primary);
+    padding: 20px 10px;
+  }
+  &__skill-card {
+    background-color: transparent;
+    box-shadow: 0 0 10px -1px var(--secondary);
+    border-radius: var(--border-radius);
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+  &__skill-icon {
+    background-color: var(--primary);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    &__description {
+      margin-left: 5%;
+      padding: 5vh 5%;
+      border-left: 1px solid var(--primary);
+    }
+    &__skill-card {
+      width: 28%;
+      padding: 30px 50px;
+    }
+    &__skill-icon {
+      height: 60px;
+    }
   }
 }

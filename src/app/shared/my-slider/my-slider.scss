@@ -1,9 +1,27 @@
 .myswiper {
-  width: 300px;
-  margin: 50px auto;
+  width: 250px;
   .swiper-slide {
-    border-radius: 30px;
+    border-radius: 20px;
     overflow: hidden;
     border: 10px solid transparent;
+  }
+  &__photo {
+    background: center/cover no-repeat;
+  }
+  &__title {
+    position: absolute;
+    padding: 2px 0;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.7);
+    //transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .myswiper {
+    width: 300px;
   }
 }

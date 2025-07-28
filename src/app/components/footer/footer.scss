@@ -1,0 +1,23 @@
+ .footer {
+  margin-top: 5vh;
+  min-height: 30vh;
+  background-image: url("/assets/backgrounds/footer.webp");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  :after {
+    content: "";
+    position: absolute;
+    bottom: calc(30vh - 50%);
+    z-index: -1;
+    left: 0;
+    right: 0;
+    height: 80%;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    background:  linear-gradient( to bottom, var(--main-bcg), #060320);
+  }
+}

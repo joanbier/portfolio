@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100vh - 62px);
+  min-height: calc(100vh - var(--nav-offset));
 }
 
 .hero-orbit {
@@ -7,6 +7,7 @@
   animation: bounce 1s linear 1;
   animation-delay: .5s;
   animation-fill-mode: forwards;
+  overflow: hidden;
   &:hover &__dot {
     scale: 1.5;
     background-color: #000 !important;
@@ -53,6 +54,12 @@
   }
 }
 
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 @keyframes rotate {
   from {

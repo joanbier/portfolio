@@ -1,24 +1,35 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA, signal} from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  effect,
+  input,
+} from '@angular/core';
+import {NgStyle} from '@angular/common';
 
-interface Slide {
+export interface Slide {
   id: number;
   title: string;
+  img: string;
 }
 
 
 @Component({
   selector: 'app-my-slider',
-  imports: [],
+  imports: [
+    NgStyle
+  ],
   templateUrl: './my-slider.html',
   styleUrl: './my-slider.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class MySlider {
-  mySlides = [
-    {id: 1, title: 'cyk'},
-    {id: 2, title: 'cyk 2'},
-    {id: 3, title: 'cyk 3'},
-    {id: 4, title: 'cyk 4'},
-  ]
-  slides = signal<Slide[]>(this.mySlides);
+  items = input<Slide[]>();
+
+  slides: Slide[] = [];
+
+  constructor() {
+    effect(() => {
+      this.slides = this.items() ?? [];
+    });
+  }
 }

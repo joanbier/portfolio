@@ -9,13 +9,7 @@ import {Footer} from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  styles: [`
-    header {
-      margin-top: var(--nav-offset);
-    }
-    section {
-    min-height: 80vh;
-  }`],
+  styles: [],
   imports: [
     Nav,
     Hero,

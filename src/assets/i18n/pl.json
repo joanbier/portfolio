@@ -8,7 +8,7 @@
   },
   "HERO": {
     "INTRO-1": "Cześć! Mam na imię",
-    "INTRO-2": "Jestem Fullstack Developerem, <br> który tworzy ciekawe rzeczy na stronach internetowych."
+    "INTRO-2": "Jestem Fullstack Developerem, <br> który tworzy <span class='gradientText'>ciekawe rzeczy</span> na stronach internetowych."
   },
   "ABOUT": {
     "TITLE": "MÓJ TEST"

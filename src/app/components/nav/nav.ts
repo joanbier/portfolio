@@ -16,8 +16,14 @@ import {Btn} from '../../shared/btn/btn';
 })
 export class Nav implements AfterViewInit{
   translate: TranslateService = inject(TranslateService);
+
   activeSection = signal<string>('');
-  navHeight = 66;
+  activeLang = signal<string>('en');
+  isMobileMenuOpen = signal<boolean>(false);
+  isMobileMenuClosing = signal<boolean>(false);
+  isMobileToggling = signal<boolean>(false);
+
+  navHeight = 69;
 
   navLinks = ['about', 'skills', 'projects', 'contact'];
 
@@ -46,10 +52,25 @@ export class Nav implements AfterViewInit{
     this.activeSection.set(currentSection);
   }
 
-  switchLang(event: Event) {
-    const selectElement = event.target as HTMLSelectElement;
-    const selectedLang = selectElement.value;
-    this.translate.use(selectedLang);
+  toggleMobileMenu() {
+    if(this.isMobileToggling()) return;
+    this.isMobileToggling.set(true);
+    if(this.isMobileMenuOpen()) {
+      this.isMobileMenuClosing.set(true);
+      setTimeout(()=> {
+        this.isMobileMenuOpen.set(false);
+        this.isMobileMenuClosing.set(false);
+        this.isMobileToggling.set(false);
+      }, 400)
+    } else {
+      this.isMobileToggling.set(false);
+      this.isMobileMenuOpen.set(true);
+    }
+  }
+
+  switchLang(string: 'pl' | 'en'): void {
+    this.translate.use(string);
+    this.activeLang.set(string);
   }
 
   scrollToSection(sectionId: string) {
@@ -62,6 +83,11 @@ export class Nav implements AfterViewInit{
         behavior: 'smooth'
       });
     }
+  }
+
+  toggleMenuAndScroll(sectionId: string) {
+    this.toggleMobileMenu();
+    this.scrollToSection(sectionId);
   }
 
 }

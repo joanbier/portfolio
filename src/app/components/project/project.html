@@ -1,3 +1,60 @@
-<app-section-title [mode]="'start'">Recent Project</app-section-title>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquid, autem dignissimos eos et explicabo ipsa labore, numquam obcaecati perspiciatis quae rerum? Cumque error maiores quia quibusdam repellendus vero.</p>
-<app-section-title [mode]="'end'">Recent Project</app-section-title>
+<div class="project section section--between">
+  <app-section-title [mode]="'start'">Recent Project</app-section-title>
+  <div class="section__content">
+    <p class="text-center section__title"><span class="gradientText">ShowFlix</span> <br> <span class="section__subtitle">My recent hobby Full-Stack App</span></p>
+    <div class="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-evenly">
+      <div class="project__mobile">
+        <img src="../../../assets/backgrounds/iphone.webp" alt="video presentation mobile">
+        <video #videoMobileRef width="640" height="360" loop playsinline autoplay muted controls poster="assets/backgrounds/iphone-placeholder.webp">
+          <source src="assets/videos/video_mobile.mp4" type="video/webm" />
+          <img src="assets/backgrounds/iphone-placeholder.webp" alt="backup image" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="project__desktop">
+        <img src="../../../assets/backgrounds/macbook.webp" alt="video presentation desktop">
+        <video #videoDesktopRef width="640" height="360" loop playsinline autoplay muted controls poster="assets/backgrounds/desktop-placeholder.webp">
+          <source src="assets/videos/video_desktop.mp4" type="video/webm" />
+          <img src="assets/backgrounds/desktop-placeholder.webp" alt="backup image" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+    <div class="w-[90%] md:w-[50%] mx-auto flex items-center justify-center text-3xl my-10">
+      <span>🐢</span>
+      <input class="mx-3" type="range" min="0.25" max="2" step="0.25" id="video-speed"
+             [(ngModel)]="speed"
+             (click)="videoMobileRef.play(); videoDesktopRef.play()"
+             (input)="videoMobileRef.playbackRate = speed; videoDesktopRef.playbackRate = speed" >
+      <span>🐇</span>
+    </div>
+    <p class="text-center font-bold text-xl mb-5 md:mb-10">About Project</p>
+    <div class="flex items-center justify-center flex-wrap">
+
+      <div class="project__description">
+        <p><b>Showflix</b> is a single-page application (SPA) for browsing and managing a collection of over 1000 movies, built with a RESTful API and a connected database.</p>
+        <p>Users can search, filter, sort, comment on movies, and add them to their favorites with automatic genre-based statistics.</p>
+        <p>The app includes authentication and authorization - admins can manage the movie database, while users can manage their profiles.</p>
+        <p>Additional features include theme customization, with support for light/dark modes and a selectable color palette.</p>
+      </div>
+
+      <div class="project__description">
+        <p class="flex items-center text-xl font-bold"><img class="mr-2" width="32" src="assets/icons/cube-stack.svg" alt="">Tech Stack</p>
+        <ul class="flex flex-col gap-3">
+          <li><span class="font-semibold">Front-End:</span> Angular v19, PrimeNG</li>
+          <li><span class="font-semibold">Back-End:</span> ASP.NET Core 8.0+, MariaDB</li>
+          <li><span class="font-semibold">Auth:</span> JWT, API Key</li>
+          <li><span class="font-semibold">DevOps & Tools:</span> GitHub, Docker, Netlify, Railway, Swagger</li>
+        </ul>
+        <div class="flex flex-col md:flex-row gap-3">
+          <app-btn [widthFull]="true" [icon]="'play'">Live App</app-btn>
+          <app-btn [widthFull]="true" [icon]="'github-24'">Github Repo</app-btn>
+          <app-btn [widthFull]="true" [icon]="'doc'">API Doc</app-btn>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <app-section-title [mode]="'end'">Recent Project</app-section-title>
+</div>

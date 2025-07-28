@@ -1,7 +1,7 @@
 :root {
   //layout
   --max-width: 1600px;
-  --nav-offset: 66px;
+  --nav-offset: 69px;
   --border-radius: 6px;
 
   //colors
@@ -20,7 +20,7 @@
   --main-bcg: #000000;
 
   //gradients
-  --orbit-gradient: conic-gradient( transparent, transparent, var(--primary), var(--secondary), #fff );
+  --orbit-gradient: conic-gradient( transparent, transparent, var(--secondary), var(--primary), #fff );
   --orbit-gradient-alt: conic-gradient( #fff, var(--primary), var(--secondary), transparent, transparent );
   --gradient: linear-gradient( to right, var(--secondary), var(--primary), var(--primary), var(--secondary) );
   --gradient-vertical: linear-gradient( to bottom, var(--secondary), var(--primary), var(--primary), var(--secondary) );
