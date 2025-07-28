@@ -1,34 +1,60 @@
-<div class="hero flex flex-col md:flex-row flex-wrap items-center justify-evenly md:justify-around w-[90%] mx-auto md:w-full md:flex-row-reverse">
-  <div class="hero-orbit flex justify-center items-center aspect-square w-full max-w-[500px] relative">
-    <div class="hero-orbit__avatar flex_center aspect-square rounded-full w-[50%] z-10">
-      <img class="object-cover rounded-full" alt="avatar" src="assets/backgrounds/avatar.webp">
+<div
+  class="hero flex flex-col md:flex-row flex-wrap items-center justify-evenly md:justify-around w-[90%] mx-auto md:w-full md:flex-row-reverse"
+>
+  <div
+    class="hero-orbit flex justify-center items-center aspect-square w-full max-w-[500px] relative"
+  >
+    <div
+      class="hero-orbit__avatar flex_center aspect-square rounded-full w-[50%] z-10"
+    >
+      <img
+        class="object-cover rounded-full"
+        alt="avatar"
+        src="assets/backgrounds/avatar.webp"
+      />
     </div>
     @for (orbit of orbitsArray; track orbit.width) {
       <div
         class="hero-orbit__trail"
         [ngStyle]="{
-      width: orbit.width + '%',
-      zIndex: orbit.index,
-      animationDuration: orbit.animationDuration + 's'
-      }">
+          width: orbit.width + '%',
+          zIndex: orbit.index,
+          animationDuration: orbit.animationDuration + 's',
+        }"
+      >
         <span class="hero-orbit__dot"></span>
       </div>
     }
   </div>
 
-  <div class="flex flex-col items-center text-xl text-center md:items-start md:text-2xl md:text-start">
+  <div
+    class="flex flex-col items-center text-xl text-center md:items-start md:text-2xl md:text-start"
+  >
     <h1 class="mb-6">
-      <span>{{'HERO.INTRO-1' | translate}}</span>
-      <app-glitch-text [glitchText]="'Joanna.'"/>
+      <span>{{ "HERO.INTRO-1" | translate }}</span>
+      <app-glitch-text [glitchText]="'Joanna.'" />
       <span [innerHTML]="'HERO.INTRO-2' | translateSafeHtml | async"></span>
     </h1>
-    <app-social-items/>
+    <app-social-items />
   </div>
 </div>
 <div class="hidden md:block arrow">
-  <svg (click)="scrollDown()" class="animate-bounce cursor-pointer text-primary w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+  <svg
+    (click)="scrollDown()"
+    class="animate-bounce cursor-pointer text-primary w-10 h-10"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="m19 9-7 7-7-7"
+    />
   </svg>
 </div>
-
-

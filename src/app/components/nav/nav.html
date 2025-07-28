@@ -1,44 +1,95 @@
-<div id="navbar" [ngClass]="{ 'mobileOpen' : isMobileMenuOpen() && !isMobileToggling()}" class="navbar flex items-center justify-between">
+<div
+  id="navbar"
+  [ngClass]="{ mobileOpen: isMobileMenuOpen() && !isMobileToggling() }"
+  class="navbar flex items-center justify-between"
+>
   <div>
-    <span class="navbar__logo text-primary" (click)="scrollToSection('hero')">J.Biernat</span>
+    <span class="navbar__logo text-primary" (click)="scrollToSection('hero')"
+      >J.Biernat</span
+    >
   </div>
 
-<!--  desktop-->
+  <!--  desktop-->
   <div class="hidden md:flex flex-grow items-center justify-between">
     <div class="navbar__lang inline-flex gap-3">
-      <img [ngClass]="{ 'navbar__lang--active' : activeLang() === 'en'}" (click)="switchLang('en')" src="assets/icons/flag-uk.png" alt="UK flag">
-      <img [ngClass]="{ 'navbar__lang--active' : activeLang() === 'pl'}" (click)="switchLang('pl')" src="assets/icons/flag-pl.png" alt="PL flag">
+      <img
+        [ngClass]="{ 'navbar__lang--active': activeLang() === 'en' }"
+        (click)="switchLang('en')"
+        src="assets/icons/flag-uk.png"
+        alt="UK flag"
+      />
+      <img
+        [ngClass]="{ 'navbar__lang--active': activeLang() === 'pl' }"
+        (click)="switchLang('pl')"
+        src="assets/icons/flag-pl.png"
+        alt="PL flag"
+      />
     </div>
 
     <nav class="flex gap-10">
       @for (link of navLinks; let i = $index; track i) {
-        <span class="navbar__link" [ngClass]="{'navbar__link--active': activeSection() === link}" (click)="scrollToSection(link)">{{('NAV.' + link) | uppercase | translate}}</span>
+        <span
+          class="navbar__link"
+          [ngClass]="{ 'navbar__link--active': activeSection() === link }"
+          (click)="scrollToSection(link)"
+          >{{ "NAV." + link | uppercase | translate }}</span
+        >
       }
     </nav>
-    <app-btn type="fancy" [icon]="'download'">{{'NAV.RESUME' | translate}}</app-btn>
+    <app-btn type="fancy" [icon]="'download'">{{
+      "NAV.RESUME" | translate
+    }}</app-btn>
   </div>
 
-<!--  mobile-->
+  <!--  mobile-->
   <div class="md:hidden">
-    <label [ngClass]="{ 'disabled' : isMobileToggling()}" class="navbar__hamburger">
-      <input [ngClass]="{ 'open' : isMobileMenuOpen() && !isMobileToggling()}" type="checkbox">
-      <svg  (click)="toggleMobileMenu()" viewBox="0 0 32 32">
-        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+    <label
+      [ngClass]="{ disabled: isMobileToggling() }"
+      class="navbar__hamburger"
+    >
+      <input
+        [ngClass]="{ open: isMobileMenuOpen() && !isMobileToggling() }"
+        type="checkbox"
+      />
+      <svg (click)="toggleMobileMenu()" viewBox="0 0 32 32">
+        <path
+          class="line line-top-bottom"
+          d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+        ></path>
         <path class="line" d="M7 16 27 16"></path>
       </svg>
     </label>
 
     @if (isMobileMenuOpen() || isMobileMenuClosing()) {
-      <nav class="navbar__mobile-menu flex flex-col items-center gap-3" [ngClass]="{'closing': isMobileMenuClosing()}">
-          @for (link of navLinks; let i = $index; track i) {
-            <span class="navbar__link" [ngClass]="{'navbar__link--active': activeSection() === link}"
-                  (click)="toggleMenuAndScroll(link)">{{ ('NAV.' + link) | uppercase | translate }}</span>
-          }
+      <nav
+        class="navbar__mobile-menu flex flex-col items-center gap-3"
+        [ngClass]="{ closing: isMobileMenuClosing() }"
+      >
+        @for (link of navLinks; let i = $index; track i) {
+          <span
+            class="navbar__link"
+            [ngClass]="{ 'navbar__link--active': activeSection() === link }"
+            (click)="toggleMenuAndScroll(link)"
+            >{{ "NAV." + link | uppercase | translate }}</span
+          >
+        }
         <div class="navbar__lang inline-flex gap-15">
-          <img [ngClass]="{ 'navbar__lang--active' : activeLang() === 'en'}" (click)="switchLang('en')" src="assets/icons/flag-uk.png" alt="UK flag">
-          <img [ngClass]="{ 'navbar__lang--active' : activeLang() === 'pl'}" (click)="switchLang('pl')" src="assets/icons/flag-pl.png" alt="PL flag">
+          <img
+            [ngClass]="{ 'navbar__lang--active': activeLang() === 'en' }"
+            (click)="switchLang('en')"
+            src="assets/icons/flag-uk.png"
+            alt="UK flag"
+          />
+          <img
+            [ngClass]="{ 'navbar__lang--active': activeLang() === 'pl' }"
+            (click)="switchLang('pl')"
+            src="assets/icons/flag-pl.png"
+            alt="PL flag"
+          />
         </div>
-        <app-btn type="fancy" [icon]="'download'">{{'NAV.RESUME' | translate}}</app-btn>
+        <app-btn type="fancy" [icon]="'download'">{{
+          "NAV.RESUME" | translate
+        }}</app-btn>
       </nav>
     }
   </div>

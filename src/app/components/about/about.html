@@ -1,29 +1,46 @@
 <div class="section section--between">
   <app-section-title [mode]="'start'">About Me</app-section-title>
-  <div class="about section__content flex items-center justify-center flex-wrap">
-    <app-my-slider [items]="myHobbies"/>
+  <div
+    class="about section__content flex items-center justify-center flex-wrap"
+  >
+    <app-my-slider [items]="myHobbies" />
     <div class="about__description flex flex-col gap-4 w-full md:w-[50%]">
       <h2 class="text-xl font-semibold">Hey there! 👋🏻</h2>
-      <p>I'm Joanna, a full stack web developer with a strong passion for crafting digital realms that captivate and
-        inspire.</p>
-      <p>I specialize in creating dynamic and interactive UI/UX experience. I stay up to date with the latest tools and
-        techniques and worked on a wide range of projects, from personal websites to large-scale applications, sharpening
-        my problem solving skills and fostering creativity.</p>
-      <p>If you're seeking a dedicated and passionate web developer, I'm eager to collaborate with you. Let's bring your
-        ideas to life!</p>
+      <p>
+        I'm Joanna, a full stack web developer with a strong passion for
+        crafting digital realms that captivate and inspire.
+      </p>
+      <p>
+        I specialize in creating dynamic and interactive UI/UX experience. I
+        stay up to date with the latest tools and techniques and worked on a
+        wide range of projects, from personal websites to large-scale
+        applications, sharpening my problem solving skills and fostering
+        creativity.
+      </p>
+      <p>
+        If you're seeking a dedicated and passionate web developer, I'm eager to
+        collaborate with you. Let's bring your ideas to life!
+      </p>
     </div>
     <div class="flex justify-center flex-wrap gap-6 my-5 md:my-10">
       @for (skill of skills; track skill.title) {
         <div class="about__skill-card flex flex-col gap-1 md:gap-3">
-          <div class="about__skill-icon" [ngStyle]="{maskImage: 'url(/assets/about/skills/' + skill.icon + ')'}"></div>
-          <p class="font-bold">{{skill.title}}</p>
-          <p class="text-sm md:text-base">{{skill.description}}</p>
+          <div
+            class="about__skill-icon"
+            [ngStyle]="{
+              maskImage: 'url(/assets/about/skills/' + skill.icon + ')',
+            }"
+          ></div>
+          <p class="font-bold">{{ skill.title }}</p>
+          <p class="text-sm md:text-base">{{ skill.description }}</p>
         </div>
       }
     </div>
 
     <div class="md:hidden mx-auto my-8">
-      <app-btn type="fancy" [icon]="'download'">{{'NAV.RESUME' | translate}}</app-btn>
+      <app-btn type="fancy" [icon]="'download'">{{
+        "NAV.RESUME" | translate
+      }}</app-btn>
     </div>
   </div>
   <app-section-title [mode]="'end'">About Me</app-section-title>

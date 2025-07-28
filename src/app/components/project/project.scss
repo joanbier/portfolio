@@ -1,5 +1,6 @@
 .project {
-  &__mobile, &__desktop {
+  &__mobile,
+  &__desktop {
     background-color: var(--main-bcg);
     background-repeat: no-repeat;
   }

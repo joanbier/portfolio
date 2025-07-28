@@ -15,7 +15,8 @@
       font-weight: 600;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 12px 16px;
       border-radius: 8px;
@@ -44,7 +45,7 @@
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
-    input:-webkit-autofill:active{
+    input:-webkit-autofill:active {
       -webkit-background-clip: text;
       -webkit-text-fill-color: #ffffff;
       background-color: var(--main-bcg);

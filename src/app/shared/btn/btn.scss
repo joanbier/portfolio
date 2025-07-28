@@ -8,7 +8,7 @@
   border-radius: var(--border-radius);
   background-color: var(--main-bcg);
   color: var(--white);
-  transition: .2s;
+  transition: 0.2s;
   overflow: hidden;
   &:not(:disabled):hover {
     filter: invert(100%);
@@ -20,8 +20,8 @@
     position: relative;
     z-index: 1;
     border: none;
-    transition: .3s;
-    &:hover{
+    transition: 0.3s;
+    &:hover {
       filter: none !important;
       box-shadow: 0 0 15px var(--primary);
       &::after {
@@ -29,7 +29,7 @@
       }
     }
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       top: -80px;
@@ -46,7 +46,6 @@
   }
 }
 
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -55,4 +54,3 @@
     transform: rotate(360deg);
   }
 }
-

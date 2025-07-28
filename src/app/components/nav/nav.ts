@@ -1,20 +1,21 @@
-import {AfterViewInit, Component, HostListener, inject, signal} from '@angular/core';
-import {NgClass, UpperCasePipe} from '@angular/common';
-import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import {Btn} from '../../shared/btn/btn';
+import {
+  AfterViewInit,
+  Component,
+  HostListener,
+  inject,
+  signal,
+} from '@angular/core';
+import { NgClass, UpperCasePipe } from '@angular/common';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Btn } from '../../shared/btn/btn';
 
 @Component({
   selector: 'app-nav',
-  imports: [
-    NgClass,
-    TranslatePipe,
-    UpperCasePipe,
-    Btn
-  ],
+  imports: [NgClass, TranslatePipe, UpperCasePipe, Btn],
   templateUrl: './nav.html',
-  styleUrl: './nav.scss'
+  styleUrl: './nav.scss',
 })
-export class Nav implements AfterViewInit{
+export class Nav implements AfterViewInit {
   translate: TranslateService = inject(TranslateService);
 
   activeSection = signal<string>('');
@@ -42,7 +43,7 @@ export class Nav implements AfterViewInit{
     const sections = document.querySelectorAll('section');
     let currentSection = '';
 
-    sections.forEach(section => {
+    sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
       if (rect.top <= this.navHeight && rect.bottom > this.navHeight) {
         currentSection = section.id;
@@ -53,15 +54,15 @@ export class Nav implements AfterViewInit{
   }
 
   toggleMobileMenu() {
-    if(this.isMobileToggling()) return;
+    if (this.isMobileToggling()) return;
     this.isMobileToggling.set(true);
-    if(this.isMobileMenuOpen()) {
+    if (this.isMobileMenuOpen()) {
       this.isMobileMenuClosing.set(true);
-      setTimeout(()=> {
+      setTimeout(() => {
         this.isMobileMenuOpen.set(false);
         this.isMobileMenuClosing.set(false);
         this.isMobileToggling.set(false);
-      }, 400)
+      }, 400);
     } else {
       this.isMobileToggling.set(false);
       this.isMobileMenuOpen.set(true);
@@ -76,11 +77,12 @@ export class Nav implements AfterViewInit{
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      const y = element.getBoundingClientRect().top + window.scrollY + (- this.navHeight);
+      const y =
+        element.getBoundingClientRect().top + window.scrollY + -this.navHeight;
 
       window.scrollTo({
         top: y,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   }
@@ -89,5 +91,4 @@ export class Nav implements AfterViewInit{
     this.toggleMobileMenu();
     this.scrollToSection(sectionId);
   }
-
 }

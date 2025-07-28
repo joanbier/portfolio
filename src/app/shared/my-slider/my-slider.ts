@@ -4,7 +4,7 @@ import {
   effect,
   input,
 } from '@angular/core';
-import {NgStyle} from '@angular/common';
+import { NgStyle } from '@angular/common';
 
 export interface Slide {
   id: number;
@@ -12,12 +12,9 @@ export interface Slide {
   img: string;
 }
 
-
 @Component({
   selector: 'app-my-slider',
-  imports: [
-    NgStyle
-  ],
+  imports: [NgStyle],
   templateUrl: './my-slider.html',
   styleUrl: './my-slider.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

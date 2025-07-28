@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-social-items',
   imports: [],
   templateUrl: './social-items.html',
-  styleUrl: './social-items.scss'
+  styleUrl: './social-items.scss',
 })
 export class SocialItems {
   socialArray = [

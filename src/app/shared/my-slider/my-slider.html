@@ -14,11 +14,14 @@
   >
     @for (slide of slides; track slide.id) {
       <swiper-slide class="swiper-slide relative">
-        <div [ngStyle]="{backgroundImage: 'url(/assets/about/hobbies/' + slide.img + ')'}" class="myswiper__photo w-full h-[300px] md:h-[400px] flex items-center justify-center text-white text-xl bg-blue-600"></div>
-        <p class="myswiper__title ">{{slide.title}}</p>
+        <div
+          [ngStyle]="{
+            backgroundImage: 'url(/assets/about/hobbies/' + slide.img + ')',
+          }"
+          class="myswiper__photo w-full h-[300px] md:h-[400px] flex items-center justify-center text-white text-xl bg-blue-600"
+        ></div>
+        <p class="myswiper__title">{{ slide.title }}</p>
       </swiper-slide>
-
     }
-
   </swiper-container>
 </div>
