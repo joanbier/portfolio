@@ -12,7 +12,7 @@ export type BtnModificator = 'fancy' | 'disabled';
   template: `
     <button [disabled]="isLoading()" [ngClass]="{'btn--fancy' : type() === 'fancy', 'w-full': widthFull()}" class="btn">
       <span class="font-medium"><ng-content></ng-content></span>
-      @if (!isLoading()) {
+      @if (isLoading()) {
         <span class="animate-spin inline-block ml-2"><img width="24" height="24" src="assets/icons/spinner.svg" alt="spinner"></span>
       } @else if (icon()?.length) {
         <span class="inline-block ml-2"><img [src]="'assets/icons/' + icon() + '.svg'" alt=""></span>
