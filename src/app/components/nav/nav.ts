@@ -70,6 +70,8 @@ export class Nav implements AfterViewInit {
   }
 
   switchLang(string: 'pl' | 'en'): void {
+    const currentLang = this.translate.currentLang;
+    if (currentLang === string) return;
     this.translate.use(string);
     this.activeLang.set(string);
   }
