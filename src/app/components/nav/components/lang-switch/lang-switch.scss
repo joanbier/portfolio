@@ -2,6 +2,7 @@
   display: flex;
   gap: calc(var(--spacing) * 15);
   &__btn {
+    background: url("../../../../../assets/icons/flag-pl.png");
     display: flex;
     justify-content: center;
     align-items: center;
