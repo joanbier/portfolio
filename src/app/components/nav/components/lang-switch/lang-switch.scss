@@ -1,6 +1,6 @@
 .lang-switch {
   display: flex;
-  gap: calc(var(--spacing) * 15);
+  //gap: calc(var(--spacing) * 15);
   &__btn {
     display: flex;
     justify-content: center;
@@ -11,6 +11,7 @@
     height: 44px;
   }
   &__flag {
+    pointer-events: none;
     width: 32px;
     border-radius: 10%;
 
