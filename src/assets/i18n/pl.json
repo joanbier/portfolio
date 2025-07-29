@@ -19,7 +19,7 @@
   "CONTACT": {
     "SEC_TITLE": "Kontakt",
     "TITLE": "Zapraszam do współpracy!",
-    "SUBTITLE": "Napisz jeśli potrzebujesz osoby do web projektu  <br />\n lub chcesz się przywitać. \uD83D\uDE0E",
+    "SUBTITLE": "Napisz jeśli potrzebujesz osoby do web projektu <br class='hidden md:block' /> albo chcesz się przywitać. \uD83D\uDE0E",
     "SUBJECT": "Temat",
     "SUBJECT_PH": "Wpisz temat",
     "MESSAGE": "Wiadomość",

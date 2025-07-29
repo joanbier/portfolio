@@ -19,7 +19,7 @@
   "CONTACT": {
     "SEC_TITLE": "Contact",
     "TITLE": "Let's collaborate!",
-    "SUBTITLE": "Contact me to discuss your web development needs <br />\n        or just to say hello. \uD83D\uDE0E",
+    "SUBTITLE": "Contact me to discuss your web development needs <br class='hidden md:block' /> or just to say hello. \uD83D\uDE0E",
     "SUBJECT": "Subject",
     "SUBJECT_PH": "Enter Subject",
     "MESSAGE": "Message",
