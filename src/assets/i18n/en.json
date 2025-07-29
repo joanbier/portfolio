@@ -11,7 +11,10 @@
     "INTRO-2": "I'm a Fullstack Developer <br> creating <span class='gradientText'>Exciting Stuff</span> on the Internet."
   },
   "ABOUT": {
-    "TITLE": "About Me"
+    "SEC_TITLE": "About Me"
+  },
+  "PROJECTS": {
+    "SEC_TITLE": "Projects"
   },
   "CONTACT": {
     "SEC_TITLE": "Contact",
