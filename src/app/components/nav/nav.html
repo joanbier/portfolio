@@ -56,11 +56,13 @@
             class="navbar__link"
             [ngClass]="{ 'navbar__link--active': activeSection() === link }"
             (click)="toggleMenuAndScroll(link)"
-            >{{ "NAV." + link }}</span
+            >{{ "NAV." + link | uppercase | translate }}</span
           >
         }
         <app-lang-switch></app-lang-switch>
-        <app-btn type="fancy" [icon]="'download'">resume</app-btn>
+        <app-btn type="fancy" [icon]="'download'">{{
+          "NAV.RESUME" | translate
+        }}</app-btn>
       </nav>
     }
   </div>
