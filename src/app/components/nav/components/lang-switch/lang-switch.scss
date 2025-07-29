@@ -1,12 +1,11 @@
 .lang-switch {
-  //display: flex;
-  //gap: calc(var(--spacing) * 15);
+  display: flex;
+  gap: calc(var(--spacing) * 15);
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: green;
     width: 44px;
     height: 44px;
   }
