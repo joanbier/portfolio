@@ -6,8 +6,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
+    padding: 5px 10px;
   }
   &__flag {
     pointer-events: none;
@@ -22,7 +21,7 @@
 
 @media (min-width: 768px) {
   .lang-switch {
-    gap: calc(var(--spacing) * 3);
+    gap: calc(var(--spacing) * 1);
     &__flag {
       width: 24px;
     }

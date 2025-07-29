@@ -6,13 +6,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  //backdrop-filter: blur(5px);
   padding: 10px 20px;
   background-color: rgba(var(--main-bcg) 0.7);
   transition: 0.3s;
   &.mobileOpen {
     background-color: rgba(0, 0, 0, 0.93);
-    //backdrop-filter: unset;
     padding-bottom: 11px;
   }
 
