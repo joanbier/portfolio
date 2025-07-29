@@ -1,0 +1,16 @@
+<div style="background-color: green" class="fixed left-0 right-0 z-[9999999] flex flex-wrap justify-between p-1">
+  <p>Logo</p>
+  <button class="p-5" (click)="toggleMobileMenu()">{{isMobileMenuOpen() ? "X" : "="}}</button>
+  @if (isMobileMenuOpen()) {
+    <div class="w-full">
+      @for (link of navLinks; let i = $index; track i) {
+        <span
+          class="navbar__link"
+        >{{ "NAV." + link | uppercase | translate }}</span
+        >
+      }
+      <app-lang-switch></app-lang-switch>
+    </div>
+  }
+
+</div>

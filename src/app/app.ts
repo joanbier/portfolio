@@ -7,14 +7,16 @@ import { Skills } from './components/skills/skills';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
 import { TranslateService } from '@ngx-translate/core';
+import { TestNav } from './components/test-nav/test-nav';
 
 @Component({
   selector: 'app-root',
   styles: [],
-  imports: [Nav, Hero, About, Project, Skills, Contact, Footer],
+  imports: [Nav, Hero, About, Project, Skills, Contact, Footer, TestNav],
   template: `
     <header id="hero">
-      <app-nav />
+      <!--      <app-nav />-->
+      <app-test-nav />
       <app-hero />
     </header>
     <main>

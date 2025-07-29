@@ -1,21 +1,8 @@
-import {
-  AfterViewInit,
-  Component,
-  HostListener,
-  inject,
-  signal,
-  OnDestroy,
-  ChangeDetectorRef,
-} from '@angular/core';
+import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
 import { NgClass, UpperCasePipe } from '@angular/common';
-import {
-  LangChangeEvent,
-  TranslatePipe,
-  TranslateService,
-} from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Btn } from '../../shared/btn/btn';
 import { LangSwitch } from './components/lang-switch/lang-switch';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -23,10 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './nav.html',
   styleUrl: './nav.scss',
 })
-export class Nav implements AfterViewInit, OnDestroy {
-  translate: TranslateService = inject(TranslateService);
-  cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
-
+export class Nav implements AfterViewInit {
   activeSection = signal<string>('');
   isMobileMenuOpen = signal<boolean>(false);
   isMobileMenuClosing = signal<boolean>(false);
@@ -35,21 +19,6 @@ export class Nav implements AfterViewInit, OnDestroy {
   navHeight = 69;
 
   navLinks = ['about', 'skills', 'projects', 'contact'];
-
-  langChangeSub: Subscription;
-
-  constructor() {
-    this.langChangeSub = this.translate.onLangChange.subscribe(
-      (event: LangChangeEvent) => {
-        // Wymuszamy detekcję zmian, aby Angular przerysował template
-        this.cdr.detectChanges();
-      },
-    );
-  }
-
-  ngOnDestroy() {
-    this.langChangeSub.unsubscribe();
-  }
 
   ngAfterViewInit(): void {
     const navbar = document.getElementById('navbar');
