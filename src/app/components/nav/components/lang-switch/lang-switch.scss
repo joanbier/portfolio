@@ -1,13 +1,21 @@
 .lang-switch {
   display: flex;
   gap: calc(var(--spacing) * 15);
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }
   &__flag {
     width: 32px;
     border-radius: 10%;
-    cursor: pointer;
-  }
-  &--active {
-    box-shadow: 0 0 5px 1px var(--white);
+
+    &--active {
+      box-shadow: 0 0 5px 1px var(--white);
+    }
   }
 }
 

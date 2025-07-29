@@ -1,14 +1,16 @@
 <div class="lang-switch">
   <button
-    [ngClass]="{ 'lang-switch--active': activeLang() === 'en' }"
+    class="lang-switch__btn"
+    type="button"
     (click)="switchLang('en')"
   >
-    <img class="lang-switch__flag" src="assets/icons/flag-uk.png" alt="UK flag" />
+    <img class="lang-switch__flag" [ngClass]="{ 'lang-switch__flag--active': activeLang() === 'en' }" src="assets/icons/flag-uk.png" alt="UK flag" />
   </button>
   <button
-    [ngClass]="{ 'lang-switch--active': activeLang() === 'pl' }"
+    class="lang-switch__btn"
+    type="button"
     (click)="switchLang('pl')"
   >
-    <img class="lang-switch__flag" src="assets/icons/flag-pl.png" alt="PL flag" />
+    <img class="lang-switch__flag" [ngClass]="{ 'lang-switch__flag--active': activeLang() === 'pl' }" src="assets/icons/flag-pl.png" alt="PL flag" />
   </button>
 </div>
