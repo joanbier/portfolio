@@ -12,6 +12,7 @@
   transition: 0.3s;
   &.mobileOpen {
     background-color: rgba(0, 0, 0, 0.93);
+    backdrop-filter: blur(500px);
     padding-bottom: 11px;
   }
 
