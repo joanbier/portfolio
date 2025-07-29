@@ -11,21 +11,7 @@
 
   <!--  desktop-->
   <div class="hidden md:flex flex-grow items-center justify-between">
-    <div class="navbar__lang inline-flex gap-3">
-      <button
-        [ngClass]="{ 'navbar__lang--active': activeLang() === 'en' }"
-        (click)="switchLang('en')"
-      >
-        <img src="assets/icons/flag-uk.png" alt="UK flag" />
-      </button>
-      <button
-        [ngClass]="{ 'navbar__lang--active': activeLang() === 'pl' }"
-        (click)="switchLang('pl')"
-      >
-        <img src="assets/icons/flag-pl.png" alt="PL flag" />
-      </button>
-    </div>
-
+  <app-lang-switch></app-lang-switch>
     <nav class="flex gap-10">
       @for (link of navLinks; let i = $index; track i) {
         <span
@@ -73,20 +59,7 @@
             >{{ "NAV." + link | uppercase | translate }}</span
           >
         }
-        <div class="navbar__lang inline-flex gap-15">
-          <img
-            [ngClass]="{ 'navbar__lang--active': activeLang() === 'en' }"
-            (click)="switchLang('en')"
-            src="assets/icons/flag-uk.png"
-            alt="UK flag"
-          />
-          <img
-            [ngClass]="{ 'navbar__lang--active': activeLang() === 'pl' }"
-            (click)="switchLang('pl')"
-            src="assets/icons/flag-pl.png"
-            alt="PL flag"
-          />
-        </div>
+        <app-lang-switch></app-lang-switch>
         <app-btn type="fancy" [icon]="'download'">{{
           "NAV.RESUME" | translate
         }}</app-btn>

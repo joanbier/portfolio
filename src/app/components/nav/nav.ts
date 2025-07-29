@@ -1,25 +1,17 @@
-import {
-  AfterViewInit,
-  Component,
-  HostListener,
-  inject,
-  signal,
-} from '@angular/core';
+import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
 import { NgClass, UpperCasePipe } from '@angular/common';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Btn } from '../../shared/btn/btn';
+import { LangSwitch } from './components/lang-switch/lang-switch';
 
 @Component({
   selector: 'app-nav',
-  imports: [NgClass, TranslatePipe, UpperCasePipe, Btn],
+  imports: [NgClass, TranslatePipe, UpperCasePipe, Btn, LangSwitch],
   templateUrl: './nav.html',
   styleUrl: './nav.scss',
 })
 export class Nav implements AfterViewInit {
-  translate: TranslateService = inject(TranslateService);
-
   activeSection = signal<string>('');
-  activeLang = signal<string>('en');
   isMobileMenuOpen = signal<boolean>(false);
   isMobileMenuClosing = signal<boolean>(false);
   isMobileToggling = signal<boolean>(false);
@@ -27,11 +19,6 @@ export class Nav implements AfterViewInit {
   navHeight = 69;
 
   navLinks = ['about', 'skills', 'projects', 'contact'];
-
-  constructor() {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-  }
 
   ngAfterViewInit(): void {
     const navbar = document.getElementById('navbar');
@@ -67,13 +54,6 @@ export class Nav implements AfterViewInit {
       this.isMobileToggling.set(false);
       this.isMobileMenuOpen.set(true);
     }
-  }
-
-  switchLang(string: 'pl' | 'en'): void {
-    const currentLang = this.translate.currentLang;
-    if (currentLang === string) return;
-    this.translate.use(string);
-    this.activeLang.set(string);
   }
 
   scrollToSection(sectionId: string) {

@@ -40,16 +40,7 @@
     }
   }
 
-  &__lang {
-    img {
-      width: 32px;
-      border-radius: 10%;
-      cursor: pointer;
-    }
-    &--active {
-      box-shadow: 0 0 5px 1px var(--white);
-    }
-  }
+
 
   &__mobile-menu {
     position: fixed;
@@ -132,11 +123,6 @@
         &::after {
           transform: scaleX(1);
         }
-      }
-    }
-    &__lang {
-      img {
-        width: 24px;
       }
     }
   }
