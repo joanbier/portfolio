@@ -11,11 +11,11 @@ import { NgClass } from '@angular/common';
 export class LangSwitch {
   translate: TranslateService = inject(TranslateService);
 
-  activeLang = signal<string>('en');
+  activeLang = signal<string>('');
 
   constructor() {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    const currentLang = this.translate.currentLang;
+    this.activeLang.set(currentLang);
   }
 
   switchLang(string: 'pl' | 'en'): void {

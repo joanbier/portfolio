@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Nav } from './components/nav/nav';
 import { Hero } from './components/hero/hero';
 import { About } from './components/about/about';
@@ -6,6 +6,7 @@ import { Project } from './components/project/project';
 import { Skills } from './components/skills/skills';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -25,4 +26,11 @@ import { Footer } from './components/footer/footer';
     <footer><app-footer /></footer>
   `,
 })
-export class App {}
+export class App {
+  translate: TranslateService = inject(TranslateService);
+
+  constructor() {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+}
