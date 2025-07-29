@@ -51,18 +51,18 @@
         class="navbar__mobile-menu flex flex-col items-center gap-3"
         [ngClass]="{ closing: isMobileMenuClosing() }"
       >
-        @for (link of navLinks; let i = $index; track i) {
-          <span
-            class="navbar__link"
-            [ngClass]="{ 'navbar__link--active': activeSection() === link }"
-            (click)="toggleMenuAndScroll(link)"
-            >{{ "NAV." + link | uppercase | translate }}</span
-          >
-        }
+<!--        @for (link of navLinks; let i = $index; track i) {-->
+<!--          <span-->
+<!--            class="navbar__link"-->
+<!--            [ngClass]="{ 'navbar__link&#45;&#45;active': activeSection() === link }"-->
+<!--            (click)="toggleMenuAndScroll(link)"-->
+<!--            >{{ "NAV." + link | uppercase | translate }}</span-->
+<!--          >-->
+<!--        }-->
         <app-lang-switch></app-lang-switch>
-        <app-btn type="fancy" [icon]="'download'">{{
-          "NAV.RESUME" | translate
-        }}</app-btn>
+<!--        <app-btn type="fancy" [icon]="'download'">{{-->
+<!--          "NAV.RESUME" | translate-->
+<!--        }}</app-btn>-->
       </nav>
     }
   </div>
