@@ -1,4 +1,6 @@
 .lang-switch {
+  display: flex;
+  gap: calc(var(--spacing) * 15);
   &__flag {
     width: 32px;
     border-radius: 10%;
@@ -11,6 +13,7 @@
 
 @media (min-width: 768px) {
   .lang-switch {
+    gap: calc(var(--spacing) * 3);
     &__flag {
       width: 24px;
     }
