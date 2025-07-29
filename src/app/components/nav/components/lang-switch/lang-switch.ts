@@ -13,6 +13,10 @@ export class LangSwitch {
 
   activeLang = signal<string>('');
 
+  get currentLang(): string {
+    return this.activeLang();
+  }
+
   constructor() {
     const currentLang = this.translate.currentLang;
     this.activeLang.set(currentLang);
