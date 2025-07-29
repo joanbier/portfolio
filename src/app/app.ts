@@ -15,8 +15,8 @@ import { TestNav } from './components/test-nav/test-nav';
   imports: [Nav, Hero, About, Project, Skills, Contact, Footer, TestNav],
   template: `
     <header id="hero">
-      <!--      <app-nav />-->
-      <app-test-nav />
+      <app-nav />
+      <!--      <app-test-nav />-->
       <app-hero />
     </header>
     <main>

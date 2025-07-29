@@ -12,7 +12,7 @@
   transition: 0.3s;
   &.mobileOpen {
     background-color: rgba(0, 0, 0, 0.93);
-    backdrop-filter: unset;
+    //backdrop-filter: unset;
     padding-bottom: 11px;
   }
 
@@ -55,8 +55,8 @@
     //animation-fill-mode: forwards;
 
     &.closing {
-      animation-direction: alternate-reverse;
-      animation: closeMenu 0.5s ease-in-out forwards;
+      //animation-direction: alternate-reverse;
+      //animation: closeMenu 0.5s ease-in-out forwards;
     }
     & > * {
       padding: 15px 0;
@@ -129,24 +129,24 @@
   }
 }
 
-@keyframes openMenu {
-  0% {
-    opacity: 0;
-    height: 0;
-  }
-  100% {
-    opacity: 1;
-    height: 100vh;
-  }
-}
+//@keyframes openMenu {
+//  0% {
+//    opacity: 0;
+//    height: 0;
+//  }
+//  100% {
+//    opacity: 1;
+//    height: 100vh;
+//  }
+//}
 
-@keyframes closeMenu {
-  0% {
-    opacity: 1;
-    height: 100vh;
-  }
-  100% {
-    opacity: 0;
-    height: 0;
-  }
-}
+//@keyframes closeMenu {
+//  0% {
+//    opacity: 1;
+//    height: 100vh;
+//  }
+//  100% {
+//    opacity: 0;
+//    height: 0;
+//  }
+//}
