@@ -12,7 +12,7 @@
   transition: 0.3s;
   &.mobileOpen {
     background-color: rgba(0, 0, 0, 0.93);
-    //backdrop-filter: unset;
+    backdrop-filter: unset;
     padding-bottom: 11px;
   }
 
@@ -47,8 +47,7 @@
     right: 0;
     left: 0;
     top: 68px;
-    //background-color: rgba(0, 0, 0, 0.93);
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.93);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     //animation: openMenu 0.5s ease-in-out 1;
