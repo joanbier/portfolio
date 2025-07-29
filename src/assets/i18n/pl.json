@@ -14,7 +14,10 @@
     "SEC_TITLE": "O Mnie"
   },
   "PROJECTS": {
-    "SEC_TITLE": "Projekty"
+    "SEC_TITLE": "Projekty",
+    "SUBTITLE": "Moja ostatnia hobbistyczna full-stackowa Apka",
+    "ABOUT": "O Projekcie",
+    "DESCRIPTION": "<p><b>Showflix</b> to jednostronicowa aplikacja (SPA) umożliwiająca przeglądanie i zarządzanie kolekcją ponad 1000 filmów, zbudowana w oparciu o REST API i połączoną bazę danych.</p> <p>Użytkownicy mogą wyszukiwać, filtrować, sortować filmy, dodawać komentarze oraz oznaczać ulubione tytuły, z automatycznym generowaniem statystyk na podstawie gatunków.</p> <p>Aplikacja posiada system uwierzytelniania i autoryzacji - administratorzy mogą zarządzać bazą filmów, a użytkownicy swoim profilem.</p> <p>Dodatkowe funkcje obejmują personalizację wyglądu, w tym tryb jasny/ciemny oraz wybór kolorystycznej palety interfejsu."
   },
   "CONTACT": {
     "SEC_TITLE": "Kontakt",

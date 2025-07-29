@@ -3,7 +3,7 @@
   <div class="section__content">
     <p class="text-center section__title">
       <span class="gradientText">ShowFlix</span> <br />
-      <span class="section__subtitle">My recent hobby Full-Stack App</span>
+      <span class="section__subtitle">{{ "PROJECTS.SUBTITLE" | translate }}</span>
     </p>
     <div
       class="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-evenly"
@@ -77,28 +77,9 @@
       />
       <span>🐇</span>
     </div>
-    <p class="text-center font-bold text-xl mb-5 md:mb-10">About Project</p>
+    <p class="text-center font-bold text-xl mb-5 md:mb-10">{{ "PROJECTS.ABOUT" | translate }}</p>
     <div class="flex items-center justify-center flex-wrap">
-      <div class="project__description">
-        <p>
-          <b>Showflix</b> is a single-page application (SPA) for browsing and
-          managing a collection of over 1000 movies, built with a RESTful API
-          and a connected database.
-        </p>
-        <p>
-          Users can search, filter, sort, comment on movies, and add them to
-          their favorites with automatic genre-based statistics.
-        </p>
-        <p>
-          The app includes authentication and authorization - admins can manage
-          the movie database, while users can manage their profiles.
-        </p>
-        <p>
-          Additional features include theme customization, with support for
-          light/dark modes and a selectable color palette.
-        </p>
-      </div>
-
+      <div class="project__description" [innerHTML]="'PROJECTS.DESCRIPTION' | translateSafeHtml | async"></div>
       <div class="project__description">
         <p class="flex items-center text-xl font-bold">
           <img

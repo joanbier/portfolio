@@ -14,7 +14,10 @@
     "SEC_TITLE": "About Me"
   },
   "PROJECTS": {
-    "SEC_TITLE": "Projects"
+    "SEC_TITLE": "Projects",
+    "SUBTITLE": "My recent hobby Full-Stack App",
+    "ABOUT": "About Project",
+    "DESCRIPTION": "<p><b>Showflix</b> is a single-page application (SPA) for browsing and managing a collection of over  1000 movies, built with a RESTful API and a connected database.</p> <p>Users can search, filter, sort, comment on movies, and add them to their favorites with automatic genre-based statistics.</p><p>The app includes authentication and authorization - admins can manage the movie database, while users can manage their profiles.</p><p>Additional features include theme customization, with support for light/dark modes and a selectable color palette.</p>"
   },
   "CONTACT": {
     "SEC_TITLE": "Contact",
