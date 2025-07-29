@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { NgClass } from '@angular/common';
 
@@ -12,12 +12,6 @@ export class LangSwitch {
   translate: TranslateService = inject(TranslateService);
 
   activeLang = signal<string>('');
-
-  readonly activeLangComp = computed(() => this.activeLang());
-
-  get currentLang(): string {
-    return this.activeLang();
-  }
 
   constructor() {
     const currentLang = this.translate.currentLang;
