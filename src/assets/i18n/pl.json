@@ -11,6 +11,23 @@
     "INTRO-2": "Jestem Fullstack Developerem, <br> który tworzy <span class='gradientText'>ciekawe rzeczy</span> na stronach internetowych."
   },
   "ABOUT": {
-    "TITLE": "MÓJ TEST"
+    "SEC-TITLE": "O Mnie"
+  },
+  "CONTACT": {
+    "SEC_TITLE": "Kontakt",
+    "TITLE": "Zapraszam do współpracy!",
+    "SUBTITLE": "Napisz jeśli potrzebujesz osoby do web projektu  <br />\n lub chcesz się przywitać. \uD83D\uDE0E",
+    "SUBJECT": "Temat",
+    "SUBJECT_PH": "Wpisz temat",
+    "MESSAGE": "Wiadomość",
+    "MESSAGE_PH": "Wprowadź wiadomość",
+    "SUBMIT": "Wyślij",
+    "HIDE": "ukryj",
+    "FILL_CORRECTLY": "Wypełnij poprawnie formularz",
+    "SUCCESS": "Wiadomość wysłana! :)",
+    "FAILURE": "Coś poszło nie tak :("
+  },
+  "FOOTER": {
+    "CR": "Wszelkie prawa zastrzeżone"
   }
 }

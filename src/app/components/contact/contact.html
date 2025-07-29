@@ -1,28 +1,28 @@
-<app-section-title>Contact</app-section-title>
+<app-section-title>{{ "CONTACT.SEC_TITLE" | translate }}</app-section-title>
 <div class="contact section section--center section__content">
   <div class="flex flex-wrap justify-evenly items-center">
     <p class="section__title w-full">
-      <span class="gradientText">Let's collaborate!</span> <br />
-      <span class="section__subtitle"
-        >Contact me to discuss your web development needs <br />
-        or just to say hello. 😎</span
-      >
+      <span class="gradientText">{{ "CONTACT.TITLE" | translate }}</span> <br />
+      <span
+        class="section__subtitle"
+        [innerHTML]="'CONTACT.SUBTITLE' | translateSafeHtml | async"
+      ></span>
     </p>
 
     <div class="contact__image w-[90%] md:w-[30%]">
-      <img src="assets/backgrounds/email.webp" alt="" />
+      <img src="assets/backgrounds/email.webp" alt="email picture" />
     </div>
 
     <div class="contact__form w-full mt-10 md:mt-0 md:w-[40%]">
       <form class="form" #form="ngForm" (ngSubmit)="onSubmit($event, form)">
         <div class="form-group">
-          <label for="subject">Subject</label>
+          <label for="subject">{{ "CONTACT.SUBJECT" | translate }}</label>
           <input
             type="text"
             id="subject"
             name="subject"
             [(ngModel)]="formData.subject"
-            placeholder="Enter Subject"
+            placeholder="{{ 'CONTACT.SUBJECT_PH' | translate }}"
             required
           />
         </div>
@@ -39,23 +39,23 @@
           />
         </div>
         <div class="form-group">
-          <label for="textarea">Message</label>
+          <label for="textarea">{{ "CONTACT.MESSAGE" | translate }}</label>
           <textarea
             name="textarea"
             [(ngModel)]="formData.message"
             id="textarea"
             rows="5"
-            placeholder="Enter your message"
+            placeholder="{{ 'CONTACT.MESSAGE' | translate }}"
             required
           ></textarea>
         </div>
         <app-btn [isLoading]="isSending()" [icon]="'paper-plane'"
-          >Submit</app-btn
+          >{{ "CONTACT.SUBMIT" | translate }}</app-btn
         >
         @if (message()) {
           <p class="text-center">
             {{ message() }}
-            <small (click)="message.set('')" class="underline">hide</small>
+            <small (click)="message.set('')" class="underline">{{ "CONTACT.HIDE" | translate }}</small>
           </p>
         }
       </form>

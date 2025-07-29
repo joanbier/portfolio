@@ -1,16 +1,28 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { SectionTitle } from '../../shared/section-title/section-title';
 import { Btn } from '../../shared/btn/btn';
 import { AbstractControl, FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateSafeHtmlPipe } from '../../shared/translate-safe-html-pipe';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [SectionTitle, Btn, FormsModule],
+  imports: [
+    SectionTitle,
+    Btn,
+    FormsModule,
+    TranslatePipe,
+    TranslateSafeHtmlPipe,
+    AsyncPipe,
+  ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
 export class Contact {
+  translate: TranslateService = inject(TranslateService);
+
   isSending = signal(false);
   message = signal<string>('');
 
@@ -32,16 +44,16 @@ export class Contact {
           'user_5VCPAeKnWXPuFf1EFz7mg',
         )
         .then(() => {
-          this.message.set('Message has been sent!');
+          this.message.set(this.translate.instant('CONTACT.SUCCESS'));
           form.resetForm();
         })
         .catch((err) => {
           console.error(err);
-          this.message.set('Something went wrong!');
+          this.message.set(this.translate.instant('CONTACT.FAILURE'));
         })
         .finally(() => this.isSending.set(false));
     } else {
-      this.message.set('Fill up the form correctly');
+      this.message.set(this.translate.instant('CONTACT.FILL_CORRECTLY'));
       Object.values(form.controls).forEach((c) =>
         (c as AbstractControl).markAsDirty(),
       );

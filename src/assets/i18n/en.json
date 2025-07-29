@@ -11,6 +11,23 @@
     "INTRO-2": "I'm a Fullstack Developer <br> creating <span class='gradientText'>Exciting Stuff</span> on the Internet."
   },
   "ABOUT": {
-    "TITLE": "my test"
+    "TITLE": "About Me"
+  },
+  "CONTACT": {
+    "SEC_TITLE": "Contact",
+    "TITLE": "Let's collaborate!",
+    "SUBTITLE": "Contact me to discuss your web development needs <br />\n        or just to say hello. \uD83D\uDE0E",
+    "SUBJECT": "Subject",
+    "SUBJECT_PH": "Enter Subject",
+    "MESSAGE": "Message",
+    "MESSAGE_PH": "Enter your message",
+    "SUBMIT": "Submit",
+    "HIDE": "hide",
+    "FILL_CORRECTLY": "Fill up the form correctly",
+    "SUCCESS": "Message has been sent!",
+    "FAILURE": "Something went wrong!"
+  },
+  "FOOTER": {
+    "CR": "All right reserved"
   }
 }
