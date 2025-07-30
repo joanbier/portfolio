@@ -11,13 +11,22 @@
     "INTRO-2": "I'm a Fullstack Developer <br> creating <span class='gradientText'>Exciting Stuff</span> on the Internet."
   },
   "ABOUT": {
-    "SEC_TITLE": "About Me"
+    "SEC_TITLE": "About Me",
+    "WELCOME": "Hey there! \uD83D\uDC4B\uD83C\uDFFB",
+    "DESCRIPTION": "<p>I'm Joanna - a Full-stack web developer focused on building robust, scalable, and thoughtfully structured web applications.</p><p>I care deeply about stability, clean architecture, and creating long-term solutions that are easy to maintain and extend. What matters most to me is making applications with good UX/UI, intuitive, fast and reliable to use.</p><p>I've worked on a wide range of projects, from smaller apps to complex systems, which has helped me develop solid engineering practices.</p><p>If you're looking for someone who thinks strategically and builds with future growth in mind - I’d love to help bring your vision to life.</p>",
+    "SKILL_1": "My main focus. I care about best UX/UI, responsive & animated layouts with performance in mind",
+    "SKILL_2": "I build solid APIs, scalable logic and clean architecture to support fast, secure and maintainable apps",
+    "SKILL_3": "Clean code, type-safety, unit tests, following style guides, naming conventions & pattern principles",
+    "SKILL_4": "I treat bugs as challenges - the best way to learn, understand, and master a system",
+    "SKILL_5": "Github/Gitlab team workflow using feature branches & code reviews. I believe that great code is built together",
+    "SKILL_6": "I'm constantly learning, writing docs, improving workflows and sharing what I know with the others"
   },
   "PROJECTS": {
     "SEC_TITLE": "Projects",
     "SUBTITLE": "My recent hobby Full-Stack App",
     "ABOUT": "About Project",
-    "DESCRIPTION": "<p><b>Showflix</b> is a single-page application (SPA) for browsing and managing a collection of over  1000 movies, built with a RESTful API and a connected database.</p> <p>Users can search, filter, sort, comment on movies, and add them to their favorites with automatic genre-based statistics.</p><p>The app includes authentication and authorization - admins can manage the movie database, while users can manage their profiles.</p><p>Additional features include theme customization, with support for light/dark modes and a selectable color palette.</p>"
+    "DESCRIPTION": "<p><b>Showflix</b> is a single-page application (SPA) for browsing and managing a collection of over  1000 movies, built with a RESTful API and a connected database.</p> <p>Users can search, filter, sort, comment on movies, and add them to their favorites with automatic genre-based statistics.</p><p>The app includes authentication and authorization - admins can manage the movie database, while users can manage their profiles.</p><p>Additional features include theme customization, with support for light/dark modes and a selectable color palette.</p>",
+    "EXTRA_INFO": "<p class=\"mb-4\"><b>Attention:</b> \uD83D\uDD52 The first request might take a few seconds - the backend wakes up from a serverless cold start (hosted on Railway).</p><p><b>FastTrack:</b> \uD83D\uDE80 Skip registration by using my demo account - email: \"user&#64;user.com\", password: \"User123!\".</p>"
   },
   "CONTACT": {
     "SEC_TITLE": "Contact",
@@ -35,5 +44,10 @@
   },
   "FOOTER": {
     "CR": "All right reserved"
+  },
+  "SHARED": {
+    "MY_SLIDER": {
+      "TITLE": "My Hobbies"
+    }
   }
 }

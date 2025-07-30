@@ -5,6 +5,7 @@ import {
   input,
 } from '@angular/core';
 import { NgStyle } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface Slide {
   id: number;
@@ -14,7 +15,7 @@ export interface Slide {
 
 @Component({
   selector: 'app-my-slider',
-  imports: [NgStyle],
+  imports: [NgStyle, TranslatePipe],
   templateUrl: './my-slider.html',
   styleUrl: './my-slider.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

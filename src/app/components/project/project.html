@@ -108,6 +108,10 @@
           <app-btn [widthFull]="true" [icon]="'github-24'">Github Repo</app-btn>
           <app-btn [widthFull]="true" [icon]="'doc'">API Doc</app-btn>
         </div>
+        <div [innerHTML]="'PROJECTS.EXTRA_INFO' | translateSafeHtml | async">
+<!--          <p class="mb-4"><b>Attention:</b> 🕒 The first request might take a few seconds - the backend wakes up from a serverless cold start (hosted on Railway).</p>-->
+<!--          <p><b>FastTrack:</b> 🚀 Skip registration by using my ready-made account - email: "user&#64;user.com" and password: "User123!".</p>-->
+        </div>
       </div>
     </div>
   </div>

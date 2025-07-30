@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { MySlider, Slide } from '../../shared/my-slider/my-slider';
 import { SectionTitle } from '../../shared/section-title/section-title';
-import { NgStyle } from '@angular/common';
+import { AsyncPipe, NgStyle } from '@angular/common';
 import { Btn } from '../../shared/btn/btn';
 import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateSafeHtmlPipe } from '../../shared/translate-safe-html-pipe';
 
 @Component({
   selector: 'app-about',
-  imports: [MySlider, SectionTitle, NgStyle, Btn, TranslatePipe],
+  imports: [
+    MySlider,
+    SectionTitle,
+    NgStyle,
+    Btn,
+    TranslatePipe,
+    TranslateSafeHtmlPipe,
+    AsyncPipe,
+  ],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
@@ -24,38 +33,32 @@ export class About implements OnInit {
   skills = [
     {
       title: 'Front-end',
-      description:
-        'My main focus. I care about best UX/UI, responsive & animated layouts with performance in mind',
+      translationKey: 'ABOUT.SKILL_1',
       icon: 'desktop.svg',
     },
     {
       title: 'Back-end',
-      description:
-        'I build solid APIs, scalable logic and clean architecture to support fast, secure and maintainable apps',
+      translationKey: 'ABOUT.SKILL_2',
       icon: 'server.svg',
     },
     {
       title: 'Best Practice',
-      description:
-        'Clean code, type-safety, unit tests, following style guides, naming conventions & pattern principles',
+      translationKey: 'ABOUT.SKILL_3',
       icon: 'badge.svg',
     },
     {
       title: 'Problem Solver',
-      description:
-        'I treat bugs as challenges - the best way to learn, understand, and master a system',
+      translationKey: 'ABOUT.SKILL_4',
       icon: 'bug.svg',
     },
     {
       title: 'Team Buddy',
-      description:
-        'Github team workflow using feature branches & code reviews. I believe that great code is built together',
+      translationKey: 'ABOUT.SKILL_5',
       icon: 'group.svg',
     },
     {
       title: 'Learning & Sharing',
-      description:
-        "I'm constantly learning, writing docs, improving workflows and sharing what I know with the others",
+      translationKey: 'ABOUT.SKILL_6',
       icon: 'share.svg',
     },
   ];

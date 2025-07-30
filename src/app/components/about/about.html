@@ -5,25 +5,12 @@
   >
     <app-my-slider [items]="myHobbies" />
     <div class="about__description flex flex-col gap-4 w-full md:w-[50%]">
-      <h2 class="text-xl font-semibold">Hey there! 👋🏻</h2>
-      <p>
-        I'm Joanna, a full stack web developer with a strong passion for
-        crafting digital realms that captivate and inspire.
-      </p>
-      <p>
-        I specialize in creating dynamic and interactive UI/UX experience. I
-        stay up to date with the latest tools and techniques and worked on a
-        wide range of projects, from personal websites to large-scale
-        applications, sharpening my problem solving skills and fostering
-        creativity.
-      </p>
-      <p>
-        If you're seeking a dedicated and passionate web developer, I'm eager to
-        collaborate with you. Let's bring your ideas to life!
-      </p>
+      <h2 class="text-xl font-semibold">{{ "ABOUT.WELCOME" | translate }}</h2>
+      <div class="flex flex-col gap-4 " [innerHTML]="'ABOUT.DESCRIPTION' | translateSafeHtml | async"></div>
+      <p></p>
     </div>
     <div class="flex justify-center flex-wrap gap-6 my-5 md:my-10">
-      @for (skill of skills; track skill.title) {
+      @for (skill of skills; let i = $index;  track i) {
         <div class="about__skill-card flex flex-col gap-1 md:gap-3">
           <div
             class="about__skill-icon"
@@ -32,7 +19,7 @@
             }"
           ></div>
           <p class="font-bold">{{ skill.title }}</p>
-          <p class="text-sm md:text-base">{{ skill.description }}</p>
+          <p class="text-sm md:text-base">{{ skill.translationKey | translate }}</p>
         </div>
       }
     </div>
