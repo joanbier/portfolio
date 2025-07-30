@@ -104,9 +104,15 @@
           </li>
         </ul>
         <div class="flex flex-col md:flex-row gap-3">
-          <app-btn [widthFull]="true" [icon]="'play'">Live App</app-btn>
-          <app-btn [widthFull]="true" [icon]="'github-24'">Github Repo</app-btn>
-          <app-btn [widthFull]="true" [icon]="'doc'">API Doc</app-btn>
+          <a href="https://showflix-jb.netlify.app/home" target="_blank">
+            <app-btn [widthFull]="true" [icon]="'play'">Live App</app-btn>
+          </a>
+          <a href="https://github.com/joanbier/movieApp_backend" target="_blank">
+            <app-btn [widthFull]="true" [icon]="'github-24'">Github Repo</app-btn>
+          </a>
+          <a href="https://movieappbackend-production-2137.up.railway.app/swagger/index.html" target="_blank">
+            <app-btn [widthFull]="true" [icon]="'doc'">API Doc</app-btn>
+          </a>
         </div>
         <div [innerHTML]="'PROJECTS.EXTRA_INFO' | translateSafeHtml | async">
 <!--          <p class="mb-4"><b>Attention:</b> 🕒 The first request might take a few seconds - the backend wakes up from a serverless cold start (hosted on Railway).</p>-->

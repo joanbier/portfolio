@@ -10,19 +10,19 @@ export class SocialItems {
   socialArray = [
     {
       name: 'github',
-      link: '#',
+      link: 'https://github.com/joanbier',
     },
     {
       name: 'linkedin',
-      link: '#',
+      link: 'https://www.linkedin.com/in/joanna-biernat/',
     },
     {
       name: 'instagram',
-      link: '#',
+      link: 'https://www.instagram.com/beer_nut95/',
     },
     {
       name: 'facebook',
-      link: '#',
+      link: 'https://www.facebook.com/joanna.biernat.95',
     },
   ];
 }
