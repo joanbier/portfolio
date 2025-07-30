@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
 import { NgClass, UpperCasePipe } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Btn } from '../../shared/btn/btn';
 import { LangSwitch } from './components/lang-switch/lang-switch';
+import { ResumeBtn } from '../../shared/resume-btn/resume-btn';
 
 @Component({
   selector: 'app-nav',
-  imports: [NgClass, TranslatePipe, UpperCasePipe, Btn, LangSwitch],
+  imports: [NgClass, TranslatePipe, UpperCasePipe, LangSwitch, ResumeBtn],
   templateUrl: './nav.html',
   styleUrl: './nav.scss',
 })

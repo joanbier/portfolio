@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MySlider, Slide } from '../../shared/my-slider/my-slider';
 import { SectionTitle } from '../../shared/section-title/section-title';
 import { AsyncPipe, NgStyle } from '@angular/common';
-import { Btn } from '../../shared/btn/btn';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslateSafeHtmlPipe } from '../../shared/translate-safe-html-pipe';
+import { ResumeBtn } from '../../shared/resume-btn/resume-btn';
 
 @Component({
   selector: 'app-about',
@@ -12,10 +12,10 @@ import { TranslateSafeHtmlPipe } from '../../shared/translate-safe-html-pipe';
     MySlider,
     SectionTitle,
     NgStyle,
-    Btn,
     TranslatePipe,
     TranslateSafeHtmlPipe,
     AsyncPipe,
+    ResumeBtn,
   ],
   templateUrl: './about.html',
   styleUrl: './about.scss',
