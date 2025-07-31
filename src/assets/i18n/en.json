@@ -48,6 +48,9 @@
   "SHARED": {
     "MY_SLIDER": {
       "TITLE": "My Hobbies"
+    },
+    "RESUME": {
+      "PATH": "CV_ENG_Joanna_Biernat.pdf"
     }
   }
 }
