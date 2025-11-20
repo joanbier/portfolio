@@ -2,7 +2,7 @@
   "NAV": {
     "ABOUT": "About",
     "SKILLS": "Skills",
-    "PROJECTS": "Projects",
+    "PROJECT": "Project",
     "CONTACT": "Contact",
     "RESUME": "Resume"
   },
@@ -21,8 +21,8 @@
     "SKILL_5": "Github/Gitlab team workflow using feature branches & code reviews. I believe that great code is built together",
     "SKILL_6": "I'm constantly learning, writing docs, improving workflows and sharing what I know with the others"
   },
-  "PROJECTS": {
-    "SEC_TITLE": "Projects",
+  "PROJECT": {
+    "SEC_TITLE": "Project",
     "SUBTITLE": "My recent hobby Full-Stack App",
     "ABOUT": "About Project",
     "DESCRIPTION": "<p><b>Showflix</b> is a single-page application (SPA) for browsing and managing a collection of over  1000 movies, built with a RESTful API and a connected database.</p> <p>Users can search, filter, sort, comment on movies, and add them to their favorites with automatic genre-based statistics.</p><p>The app includes authentication and authorization - admins can manage the movie database, while users can manage their profiles.</p><p>Additional features include theme customization, with support for light/dark modes and a selectable color palette.</p>",

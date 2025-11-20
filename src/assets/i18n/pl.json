@@ -2,7 +2,7 @@
   "NAV": {
     "ABOUT": "O mnie",
     "SKILLS": "Umiejętności",
-    "PROJECTS": "Projekty",
+    "PROJECT": "Projekt",
     "CONTACT": "Kontakt",
     "RESUME": "Pobierz CV"
   },
@@ -21,8 +21,8 @@
     "SKILL_5": "Pracuję zespołowo z wykorzystaniem GitHuba/GiLab, feature branchy i code review. Wierzę, że dobry kod powstaje we współpracy",
     "SKILL_6": "Stale poszerzam swoje umiejętności, tworzę dokumentację, usprawniam procesy i chętnie dzielę się wiedzą z innymi"
   },
-  "PROJECTS": {
-    "SEC_TITLE": "Projekty",
+  "PROJECT": {
+    "SEC_TITLE": "Projekt",
     "SUBTITLE": "Moja ostatnia hobbistyczna full-stackowa Apka",
     "ABOUT": "O Projekcie",
     "DESCRIPTION": "<p><b>Showflix</b> to jednostronicowa aplikacja (SPA) umożliwiająca przeglądanie i zarządzanie kolekcją ponad 1000 filmów, zbudowana w oparciu o REST API i połączoną bazę danych.</p> <p>Użytkownicy mogą wyszukiwać, filtrować, sortować filmy, dodawać komentarze oraz oznaczać ulubione tytuły, z automatycznym generowaniem statystyk na podstawie gatunków.</p> <p>Aplikacja posiada system uwierzytelniania i autoryzacji - administratorzy mogą zarządzać bazą filmów, a użytkownicy swoim profilem.</p> <p>Dodatkowe funkcje obejmują personalizację wyglądu, w tym tryb jasny/ciemny oraz wybór kolorystycznej palety interfejsu.",

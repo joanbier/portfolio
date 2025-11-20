@@ -18,7 +18,7 @@ export class Nav implements AfterViewInit {
 
   navHeight = 69;
 
-  navLinks = ['about', 'skills', 'projects', 'contact'];
+  navLinks = ['about', 'skills', 'project', 'contact'];
 
   ngAfterViewInit(): void {
     const navbar = document.getElementById('navbar');

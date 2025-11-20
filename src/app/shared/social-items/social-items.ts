@@ -20,9 +20,9 @@ export class SocialItems {
       name: 'instagram',
       link: 'https://www.instagram.com/beer_nut95/',
     },
-    {
-      name: 'facebook',
-      link: 'https://www.facebook.com/joanna.biernat.95',
-    },
+    // {
+    //   name: 'facebook',
+    //   link: 'https://www.facebook.com/joanna.biernat.95',
+    // },
   ];
 }

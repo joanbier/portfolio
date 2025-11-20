@@ -20,7 +20,7 @@ import { TranslateService } from '@ngx-translate/core';
     <main>
       <section id="about"><app-about /></section>
       <section id="skills"><app-skills /></section>
-      <section id="projects"><app-project /></section>
+      <section id="project"><app-project /></section>
       <section id="contact"><app-contact /></section>
     </main>
     <footer><app-footer /></footer>

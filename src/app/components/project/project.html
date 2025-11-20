@@ -1,9 +1,9 @@
 <div class="project section section--between">
-  <app-section-title [mode]="'start'">{{ "PROJECTS.SEC_TITLE" | translate }}</app-section-title>
+  <app-section-title [mode]="'start'">{{ "PROJECT.SEC_TITLE" | translate }}</app-section-title>
   <div class="section__content">
     <p class="text-center section__title">
       <span class="gradientText">ShowFlix</span> <br />
-      <span class="section__subtitle">{{ "PROJECTS.SUBTITLE" | translate }}</span>
+      <span class="section__subtitle">{{ "PROJECT.SUBTITLE" | translate }}</span>
     </p>
     <div
       class="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-evenly"
@@ -77,9 +77,9 @@
       />
       <span>🐇</span>
     </div>
-    <p class="text-center font-bold text-xl mb-5 md:mb-10">{{ "PROJECTS.ABOUT" | translate }}</p>
+    <p class="text-center font-bold text-xl mb-5 md:mb-10">{{ "PROJECT.ABOUT" | translate }}</p>
     <div class="flex items-center justify-center flex-wrap">
-      <div class="project__description" [innerHTML]="'PROJECTS.DESCRIPTION' | translateSafeHtml | async"></div>
+      <div class="project__description" [innerHTML]="'PROJECT.DESCRIPTION' | translateSafeHtml | async"></div>
       <div class="project__description">
         <p class="flex items-center text-xl font-bold">
           <img
@@ -114,12 +114,12 @@
             <app-btn [widthFull]="true" [icon]="'doc'">API Doc</app-btn>
           </a>
         </div>
-        <div [innerHTML]="'PROJECTS.EXTRA_INFO' | translateSafeHtml | async">
+        <div [innerHTML]="'PROJECT.EXTRA_INFO' | translateSafeHtml | async">
 <!--          <p class="mb-4"><b>Attention:</b> 🕒 The first request might take a few seconds - the backend wakes up from a serverless cold start (hosted on Railway).</p>-->
 <!--          <p><b>FastTrack:</b> 🚀 Skip registration by using my ready-made account - email: "user&#64;user.com" and password: "User123!".</p>-->
         </div>
       </div>
     </div>
   </div>
-  <app-section-title [mode]="'end'">{{ "PROJECTS.SEC_TITLE" | translate }}</app-section-title>
+  <app-section-title [mode]="'end'">{{ "PROJECT.SEC_TITLE" | translate }}</app-section-title>
 </div>
